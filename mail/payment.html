@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+    :root {
+      --color-primary: #1b24ff;
+      --color-dark: #282828;
+      --color-light: #f0f0f0;
+      --color-white: #fff;
+      --color-muted-foreground: #808080;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+
+      font-family: "JetBrains Mono", "monospace";
+      letter-spacing: -0.05rem;
+    }
+
+    body {
+      background: var(--color-light);
+      padding: 1rem;
+    }
+
+    .box {
+      background: var(--color-white);
+      max-width: 450px;
+      margin: auto;
+      padding: 2rem;
+      padding-bottom: 2.5rem;
+      border: 1px solid var(--color-muted-foreground);
+
+      img {
+        width: 6rem;
+      }
+
+      h2 {
+        letter-spacing: -0.12rem;
+        color: var(--color-dark);
+        margin-top: 2rem;
+      }
+
+      pre {
+        margin-top: 0.75rem;
+        color: var(--color-muted-foreground);
+        margin-bottom: 2rem;
+      }
+
+      ul {
+        li {
+          list-style: none;
+        }
+      }
+
+      p {
+        color: var(--color-muted-foreground);
+        margin: 2rem 0;
+        font-size: small;
+        margin-bottom: 3rem;
+      }
+
+      a {
+        padding: 0.65rem 1.75rem;
+        background: var(--color-primary);
+        color: var(--color-white);
+        text-decoration: none;
+      }
+    }
+  </style>
+  <body>
+    <div class="box">
+      <img src="https://fysite.id/logo.svg" />
+      <h2>Hi {{.CustomerName}},</h2>
+      <pre>We have received your order!</pre>
+      <ul>
+        <li><strong>Reference:</strong> {{.Reference}}</li>
+        <li><strong>Method:</strong> {{.PaymentName}}</li>
+        <li><strong>Amount:</strong> {{.AmountFormatted}}</li>
+      </ul>
+      <p>
+        * Please proceed the payment by clicking this button. If it's not you,
+        ignore it.
+      </p>
+      <a href="{{.CheckoutUrl}}" target="_blank">Pay now</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+    :root {
+      --color-primary: #1b24ff;
+      --color-dark: #282828;
+      --color-light: #f0f0f0;
+      --color-white: #fff;
+      --color-muted-foreground: #808080;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+
+      font-family: "JetBrains Mono", "monospace";
+      letter-spacing: -0.05rem;
+    }
+
+    body {
+      background: var(--color-light);
+      padding: 1rem;
+    }
+
+    .box {
+      background: var(--color-white);
+      max-width: 450px;
+      margin: auto;
+      padding: 2rem;
+      padding-bottom: 2.5rem;
+      border: 1px solid var(--color-muted-foreground);
+
+      img {
+        width: 6rem;
+      }
+
+      h2 {
+        letter-spacing: -0.12rem;
+        color: var(--color-dark);
+        margin: 2rem 0;
+      }
+
+      span {
+        color: var(--color-muted-foreground);
+        margin-bottom: 2rem;
+      }
+
+      p {
+        color: var(--color-muted-foreground);
+        margin: 2rem 0;
+        font-size: small;
+        margin-bottom: 3rem;
+      }
+
+      a {
+        padding: 0.65rem 1.75rem;
+        background: var(--color-primary);
+        color: var(--color-white);
+        text-decoration: none;
+      }
+    }
+  </style>
+  <body>
+    <div class="box">
+      <img src="https://fysite.id/logo.svg" />
+      <h2>Hi {{.Name}},</h2>
+      <span>
+        We have received your payment!<br />You can now access to the respective
+        courses on your dashboard by clicking this button.
+      </span>
+
+      <p>
+        * Please click <b>forgot password</b> and set your password if this is
+        your first time purchasing.
+      </p>
+      <a href="https://lms.fysite.id" target="_blank">Login</a>
+    </div>
+  </body>
+</html>

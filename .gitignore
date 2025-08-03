@@ -1,0 +1,7 @@
+./todo.txt
+./data.json
+
+.env
+*.exe
+
+.DS_Store

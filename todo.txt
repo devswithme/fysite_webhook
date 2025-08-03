@@ -1,0 +1,8 @@
+1. ambil course code dari form √
+2. maping course ke order items cocokin ke data.json √
+3. tes tripay request transaction √
+4. redis untuk simpan email, codes
+
+// kalo bisa
+5. create user student dan kirim notif kalau belum  √
+6. tambah grant ke course yang dipilih mapping √

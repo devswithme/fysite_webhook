@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "reference": "DEV-T39034266277OQN9N",
+    "merchant_ref": "99e67ae5-8b24-4e1e-b80b-b29a2965e54f",
+    "payment_selection_type": "static",
+    "payment_method": "INDOMARET",
+    "payment_name": "Indomaret",
+    "customer_name": "John doe",
+    "customer_email": "budi@gmail.com",
+    "customer_phone": "+62812345678",
+    "callback_url": "https://7f704bb1bc0f.ngrok-free.app/api/payment/callback",
+    "return_url": null,
+    "amount": 49000,
+    "fee_merchant": 3500,
+    "fee_customer": 0,
+    "total_fee": 3500,
+    "amount_received": 45500,
+    "pay_code": "615674047188802",
+    "pay_url": null,
+    "checkout_url": "https://tripay.co.id/checkout/DEV-T39034266277OQN9N",
+    "status": "UNPAID",
+    "expired_time": 1754107219,
+    "order_items": [
+      {
+        "sku": null,
+        "name": "fs-1",
+        "price": 49000,
+        "quantity": 1,
+        "subtotal": 49000,
+        "product_url": null,
+        "image_url": null
+      },
+      {
+        "sku": null,
+        "name": "fs-2",
+        "price": 0,
+        "quantity": 1,
+        "subtotal": 0,
+        "product_url": null,
+        "image_url": null
+      }
+    ],
+    "instructions": [
+      {
+        "title": "Pembayaran via INDOMARET",
+        "steps": [
+          "Datang ke gerai Indomaret",
+          "Sampaikan ke kasir ingin melakukan pembayaran aplikasi <b>Linkita</b>",
+          "Berikan kode bayar (<b>615674047188802</b>) ke kasir",
+          "Bayar sesuai jumlah yang diinfokan oleh kasir",
+          "Simpan struk bukti pembayaran Anda"
+        ]
+      }
+    ]
+  }
+}
