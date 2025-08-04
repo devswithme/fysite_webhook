@@ -7,12 +7,23 @@ services:
     restart: always
     env_file:
       - .env
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     depends_on:
       - redis
-
+    environment:
+      - VIRTUAL_HOST=api.fysite.id
+      - LETSENCRYPT_HOST=api.fysite.id
+      - LETSENCRYPT_EMAIL=testedprojected@gmail.com
+    networks:
+      - nginx-proxy
   redis:
+    networks:
+      - nginx-proxy
     image: redis:8.2-rc1-alpine
     container_name: webhook_cache
     restart: unless-stopped
+
+networks:
+  nginx-proxy:
+    external: true
